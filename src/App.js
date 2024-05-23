@@ -10,7 +10,9 @@ import { UseContextHook } from './hooks/default-hooks/useContextHook';
 import { UseMemoHook } from './hooks/default-hooks/useMemoHook';
 import { UseRefHook } from './hooks/default-hooks/useRefHook';
 import { UseReducerHook } from './hooks/default-hooks/useReducerHook';
-
+import UnControlledComponent from './components/controlledanduncontrolled/UnControlledComponent';
+import ControlledComponent from './components/controlledanduncontrolled/ControlledComponent';
+import { ToDoList } from './components/todolist/ToDoList';
 
 function App() {
   useEffect(() => {
@@ -28,6 +30,9 @@ function App() {
       <UseMemoHook/>
       <UseRefHook/>
       <UseReducerHook/>
+      <UnControlledComponent/>
+      <ControlledComponent/>
+      <ToDoList/>
     </div>
   );
 }
