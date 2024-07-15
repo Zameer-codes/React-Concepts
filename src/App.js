@@ -13,6 +13,30 @@ import { UseReducerHook } from './hooks/default-hooks/useReducerHook';
 import UnControlledComponent from './components/controlledanduncontrolled/UnControlledComponent';
 import ControlledComponent from './components/controlledanduncontrolled/ControlledComponent';
 import { ToDoList } from './components/todolist/ToDoList';
+import { PseudoClassConcepts } from './Css-concepts/PseudoClass';
+import Movies from './components/movies-app/movies';
+
+function Learning() {
+  return (
+    <div>
+      <h1 className='header'>React Concepts</h1>
+      <Movies />
+      <LocalStorage />
+      <Counter />
+      <Dropdown />
+      <CheckBox />
+      <Table />
+      <UseContextHook />
+      <UseMemoHook />
+      <UseRefHook />
+      <UseReducerHook />
+      <UnControlledComponent />
+      <ControlledComponent />
+      <ToDoList />
+      <PseudoClassConcepts />
+    </div>
+  )
+}
 
 function App() {
   useEffect(() => {
@@ -20,19 +44,7 @@ function App() {
   }, []);
   return (
     <div>
-      <h1 className='header'>React Concepts</h1>
-      <LocalStorage/>
-      <Counter />
-      <Dropdown/>
-      <CheckBox/>
-      <Table/>
-      <UseContextHook/>
-      <UseMemoHook/>
-      <UseRefHook/>
-      <UseReducerHook/>
-      <UnControlledComponent/>
-      <ControlledComponent/>
-      <ToDoList/>
+      
     </div>
   );
 }

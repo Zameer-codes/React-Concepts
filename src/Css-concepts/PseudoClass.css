@@ -1,0 +1,13 @@
+
+.nthChildCss>span:nth-child(2n+1){
+    background-color: grey;
+}
+
+.nthChildCss>span:nth-child(2n+2){
+    background-color: brown;
+}
+
+.nthChildCss>span{
+    width:100px;
+    display: block;
+}

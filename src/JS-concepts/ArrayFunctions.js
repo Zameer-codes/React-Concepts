@@ -3,6 +3,7 @@ import React from 'react'
 function ArrayFunctions() {
     arrayOps();
     arrayObj();
+    CreateArrayWithSelectedFields();
     return (
         <div>ArrayFunctions</div>
     )
@@ -56,4 +57,50 @@ function arrayObj(){
 
     console.log(four);
     console.log(restElements);
+}
+
+function CreateArrayWithSelectedFields(){
+
+    let originalArray = [
+        {
+            "prop1" : "value1",
+            "nestedProp1":{
+                "prop1" : "value1",
+                "prop2" : "value2"
+            },
+            "prop3" : "value3"
+        },
+        {
+            "prop1" : "value1",
+            "nestedProp1":{
+                "prop1" : "value1",
+                "prop2" : "value2"
+            },
+            "prop3" : "value3",
+            "prop4" : "value4"
+        },
+        {
+            "prop1" : "value1",
+            "nestedProp1":{
+                "prop1" : "value1",
+                "prop2" : "value2"
+            },
+            "prop3" : "value3",
+            "prop4" : "value4",
+            "prop5" : "value5"
+        }
+    ]
+
+    // console.log(originalArray[0].prop1);
+    let selectiveArray = originalArray.map(({prop1, nestedProp1, prop3}) => ({prop1, nestedProp1, prop3}))
+    console.log(selectiveArray);
+
+    let selectiveArrayWithoutDestructure = originalArray.map(item => {
+        return{
+            "prop1":item.prop1,
+            "nestedProp1" : item.nestedProp1,
+            "prop3" : item.prop3
+        }
+    });
+    console.log(selectiveArrayWithoutDestructure);
 }
